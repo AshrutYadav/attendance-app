@@ -1,0 +1,58 @@
+{
+  "name": "attendance-app-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack attendance management application",
+  "structure": {
+    "frontend": {
+      "framework": "React 18",
+      "port": 3000,
+      "buildOutput": "frontend/build",
+      "proxy": "http://localhost:5000"
+    },
+    "backend": {
+      "framework": "Node.js/Express",
+      "port": 5000,
+      "database": "MongoDB",
+      "authentication": "JWT"
+    }
+  },
+  "scripts": {
+    "development": {
+      "command": "npm run dev",
+      "description": "Start both frontend and backend in development mode"
+    },
+    "production": {
+      "command": "npm run build && npm start",
+      "description": "Build and start in production mode"
+    },
+    "testing": {
+      "command": "npm run test",
+      "description": "Run tests for both frontend and backend"
+    }
+  },
+  "dependencies": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0",
+    "mongodb": ">=4.0.0"
+  },
+  "features": {
+    "authentication": true,
+    "authorization": true,
+    "fileUpload": true,
+    "emailNotifications": true,
+    "realTimeUpdates": false,
+    "mobileResponsive": true,
+    "pwa": false
+  },
+  "deployment": {
+    "frontend": ["Netlify", "Vercel", "GitHub Pages", "AWS S3"],
+    "backend": ["Heroku", "DigitalOcean", "AWS EC2", "Railway"],
+    "database": ["MongoDB Atlas", "AWS DocumentDB", "Local MongoDB"]
+  },
+  "maintainers": ["Your Name"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "your-repository-url"
+  }
+} 

@@ -1,0 +1,151 @@
+/* Navigation */
+.navbar {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #282833;
+}
+
+.brand-icon {
+  font-size: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: #64748b;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  transform: translateX(4px);
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.nav-link-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+  width: 20px;
+}
+
+.nav-label {
+  font-weight: 500;
+}
+
+.nav-profile {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 80px;
+    padding: 2rem 1rem;
+  }
+  
+  .brand-text,
+  .nav-label {
+    display: none;
+  }
+  
+  .nav-link {
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .nav-link-content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: none;
+  }
+  
+  .nav-brand {
+    display: none;
+  }
+  
+  .nav-menu {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
+  
+  .nav-link {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .nav-link-content {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .nav-profile {
+    display: none;
+  }
+} 
