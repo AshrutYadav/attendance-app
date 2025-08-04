@@ -54,7 +54,7 @@ const AddStudent = () => {
     setMessage({ type: '', text: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/students', {
+      const response = await fetch('${process.env.REACT_APP_BACKEND_URL}/api/students', {
         method: 'POST',
         headers: getAuthHeaders(),
         body: JSON.stringify(formData)

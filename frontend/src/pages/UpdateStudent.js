@@ -51,7 +51,7 @@ const UpdateStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      let url = `http://localhost:5000/api/students/branch/${selectedBranch}`;
+      let url = `${process.env.REACT_APP_BACKEND_URL}/api/students/branch/${selectedBranch}`;
       if (selectedYear) {
         url += `?year=${selectedYear}`;
       }
@@ -81,7 +81,7 @@ const UpdateStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`http://localhost:5000/api/students/search/${searchUID}`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/students/search/${searchUID}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -140,7 +140,7 @@ const UpdateStudent = () => {
       setSubmitting(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`http://localhost:5000/api/students/${selectedStudent.uid}`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/students/${selectedStudent.uid}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

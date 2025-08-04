@@ -44,7 +44,7 @@ const SearchStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`http://localhost:5000/api/students/search/${searchUID}`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/students/search/${searchUID}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -68,7 +68,7 @@ const SearchStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      let url = `http://localhost:5000/api/students/branch/${selectedBranch}`;
+      let url = `${process.env.REACT_APP_BACKEND_URL}/api/students/branch/${selectedBranch}`;
       if (selectedYear) {
         url += `?year=${selectedYear}`;
       }
@@ -97,7 +97,7 @@ const SearchStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`http://localhost:5000/api/students/year/${selectedYear}`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/students/year/${selectedYear}`);
       const data = await response.json();
 
       if (response.ok) {
