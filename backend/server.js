@@ -1,10 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require("cors");
-app.use(cors({
-  origin:"https://attendance-app-frontend-git-main-ashrutyadavs-projects.vercel.app/",
-  credentials: true,
-}));
+
 const helmet = require('helmet');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
@@ -28,7 +25,7 @@ const app = express();
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.FRONTEND_URL ,
+  origin: "https://attendance-app-frontend-git-main-ashrutyadavs-projects.vercel.app",
   credentials: true
 }));
 

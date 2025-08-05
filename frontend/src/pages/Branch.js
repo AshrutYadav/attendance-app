@@ -37,7 +37,7 @@ const Branch = () => {
   const fetchStatistics = async () => {
     try {
       setLoading(true);
-      const response = await fetch('${process.env.REACT_APP_BACKEND_URL}/api/students/statistics');
+      const response = await fetch('https://backend-nd9n.onrender.com/api/students/statistics');
       const data = await response.json();
 
       if (response.ok) {
@@ -59,7 +59,7 @@ const Branch = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      let url = `${process.env.REACT_APP_BACKEND_URL}/api/students/branch/${selectedBranch}`;
+      let url = `https://backend-nd9n.onrender.com/api/students/branch/${selectedBranch}`;
       if (selectedYear) {
         url += `?year=${selectedYear}`;
       }

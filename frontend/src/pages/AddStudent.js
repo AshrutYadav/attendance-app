@@ -54,7 +54,7 @@ const AddStudent = () => {
     setMessage({ type: '', text: '' });
 
     try {
-      const response = await fetch('${process.env.REACT_APP_BACKEND_URL}/api/students', {
+      const response = await fetch('https://backend-nd9n.onrender.com/api/students', {
         method: 'POST',
         headers: getAuthHeaders(),
         body: JSON.stringify(formData)

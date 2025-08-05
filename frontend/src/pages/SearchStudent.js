@@ -44,7 +44,7 @@ const SearchStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/students/search/${searchUID}`);
+      const response = await fetch(`https://backend-nd9n.onrender.com/api/students/search/${searchUID}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -68,7 +68,7 @@ const SearchStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      let url = `${process.env.REACT_APP_BACKEND_URL}/api/students/branch/${selectedBranch}`;
+      let url = `https://backend-nd9n.onrender.com/api/students/branch/${selectedBranch}`;
       if (selectedYear) {
         url += `?year=${selectedYear}`;
       }
@@ -97,7 +97,7 @@ const SearchStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/students/year/${selectedYear}`);
+      const response = await fetch(`https://backend-nd9n.onrender.com/api/students/year/${selectedYear}`);
       const data = await response.json();
 
       if (response.ok) {

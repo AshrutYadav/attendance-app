@@ -48,7 +48,7 @@ const MarkAttendance = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/students/attendance/${selectedYear}/${selectedBranch}`);
+      const response = await fetch(`https://backend-nd9n.onrender.com/api/students/attendance/${selectedYear}/${selectedBranch}`);
       const data = await response.json();
 
       if (response.ok) {
