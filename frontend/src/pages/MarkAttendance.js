@@ -113,7 +113,7 @@ const MarkAttendance = () => {
         })
       };
 
-      const response = await fetch('http://localhost:5000/api/attendance/mark', {
+      const response = await fetch('https://backend-yv2f.onrender.com/api/attendance/mark', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
