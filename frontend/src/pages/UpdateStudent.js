@@ -51,7 +51,7 @@ const UpdateStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      let url = `https://backend-nd9n.onrender.com/api/students/branch/${selectedBranch}`;
+      let url = `https://backend-yv2f.onrender.com/api/students/branch/${selectedBranch}`;
       if (selectedYear) {
         url += `?year=${selectedYear}`;
       }
@@ -81,7 +81,7 @@ const UpdateStudent = () => {
       setLoading(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`https://backend-nd9n.onrender.com/api/students/search/${searchUID}`);
+      const response = await fetch(`https://backend-yv2f.onrender.com/api/students/search/${searchUID}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -140,7 +140,7 @@ const UpdateStudent = () => {
       setSubmitting(true);
       setMessage({ type: '', text: '' });
 
-      const response = await fetch(`https://backend-nd9n.onrender.com/api/students/${selectedStudent.uid}`, {
+      const response = await fetch(`https://backend-yv2f.onrender.com/api/students/${selectedStudent.uid}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
